@@ -69,7 +69,7 @@
                 ]
               }
             ]
-            var platinum = '<center><h2>Platinum Storage</h2><p>11634 Darryl Dr.<br />Baton Rouge, LA 70815</p></center>';
+            var platinum = '<center><h4>Platinum Storage</h4><p>25109 Wax Rd.<br />Denham Springs, LA 70726</p></center>';
             var myLatLng1 = {lat: 30.432503, lng: -90.933926};
             var mapDiv = document.getElementById('map');
             var styledMap = new google.maps.StyledMapType(stylesArray,
