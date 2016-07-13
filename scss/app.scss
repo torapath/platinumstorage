@@ -1,0 +1,374 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+
+@include foundation-global-styles;
+// @include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+// @include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+// @include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+// @include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+@import url(foundation-icons/foundation-icons.css);
+
+.container {
+  padding: 1rem;
+}
+
+.top-bar div, .top-bar div a {
+  font-family: $body-font-family; 
+  color: #939393;
+}
+
+.menu li a {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.top-bar-section, .top-bar-section a {
+  //font-size: 1.2rem;
+}
+#menu_logo a {
+  padding: 0;
+  letter-spacing: 2px;
+  font-weight: 900;
+}
+.gallery {
+  display: block;
+  line-height: 0;
+  div img {
+    margin-top: .9375rem;
+    width: 100%!important;
+    height: auto!important;
+  }
+}
+$large-columns: 3;
+$medium-columns: 2;
+$small-columns: 1;
+
+.galleryTemplate {
+  -webkit-column-gap: .9375rem;
+  -moz-column-gap: .9375rem;
+  column-gap: .9375rem;
+}
+.gallery-large {
+  @extend .galleryTemplate;
+  -webkit-column-count: $large-columns;
+  -moz-column-count: $large-columns;
+  column-count: $large-columns;
+}
+.gallery-medium {
+  @extend .galleryTemplate;
+  -webkit-column-count: $medium-columns;
+  -moz-column-count: $medium-columns;
+  column-count: $medium-columns;
+}
+.gallery-small {
+  @extend .galleryTemplate;
+  -webkit-column-count: $small-columns;
+  -moz-column-count: $small-columns;
+  column-count: $small-columns;
+  img {
+    padding: 1rem;
+  }
+}
+// END GALLERY BS
+
+ul:not(.menu) {
+    list-style: circle url(foundation-icons/svgs/play-circle.svg);
+}
+
+.badge, i, .button_custom, a {
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+object {
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.top-bar-section div.right {
+	text-align: right;
+	margin: 1rem;
+}
+
+#menu_logo {
+  border: 2px solid $primary-color;
+  border-radius: ($global-radius * 2);
+  text-align: right;
+}
+.top-bar {
+  font-family: $header-font-family;
+  background-image: url(../img/slant.png);
+  width: 100%;
+}
+.menu {
+  background: transparent;
+}
+#home_cta .column {
+  text-align: center;
+}
+h2, h3, a.button {
+  text-transform: uppercase;
+}
+#home_cta h3 {
+  color: $white;
+  margin: 0 10px 0 0;
+}
+#home_cta {
+  background-color: $primary-color;
+  margin-bottom: 2rem;
+}
+#home_cta .column img, #home_cta .column h3, #home_cta .column a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.r_arrow {
+  background-color: $white;
+  color: $black;
+  display: inline-block;
+  vertical-align: middle;
+}
+.r_arrow_opp {
+  background-color: $primary-color;
+  color: $white;
+  display: inline-block;
+  vertical-align: middle;
+}
+.button .badge {
+  vertical-align: middle;
+  background-color: $white;
+  display: inline-block;
+  font-size: 1em;
+}
+.button_custom {
+  padding: $button-padding;
+  border-radius: $button-radius;
+}
+.button_opp {
+  @extend .button_custom;
+  background-color: $white;
+  color: $primary-color;
+  margin: 5px 5px 5px 10px;
+}
+.button_opp:hover {
+  background-color: $dark-gray;
+  color: $white;
+  .badge, i {
+    background-color: $white;
+    color: $primary-color;
+  }
+}
+.dropdown .fi-list {
+  font-size: 2rem;
+}
+.across3 {
+  width: 100%;
+  text-align: center;
+  background-color: $light-gray;
+  margin-top: 2rem;
+  .column p {
+    margin-left: 20%;
+    margin-bottom: 80px;
+    max-width: 60%;
+  }
+  .column {
+    position: relative;
+  }
+  .button_gray {
+    position: absolute;
+    bottom: 0;
+    margin-left: 30%;
+    margin-right: 30%;
+    left: 0;
+    right: 0;
+  }
+  padding: 2rem 0;
+}
+.icon3 {
+  img {
+    position: relative;
+    width: 200px;
+  }
+}
+.hrMid {
+  margin: 0;
+  width: 15vw;
+  position: absolute;
+  border: 2px solid black;
+  right: -7.5vw;
+  top: 100px;
+}
+.bordered {
+  border: 4px solid $primary-color;
+  border-radius: $global-radius;
+  padding: 1rem;
+  margin-top: 2rem;
+  .contact {
+    text-align: center;
+  }
+}
+footer {
+  color: $white;
+  text-align: center;
+  background-color: $primary-color;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  p {
+    margin-bottom: 0;
+  }
+  a {
+    color: $white;
+  }
+  a:hover {
+    color: $dark-gray;
+  }
+}
+.button_gray {
+  @extend .button_custom;
+  text-align: center;
+  vertical-align: middle;
+  background-color: $dark-gray;
+  color: $white;
+}
+.button_gray:hover {
+  color: $light-gray;
+  background-color: $primary-color;
+}
+.address .small-4, .phone .small-4, .email .small-4 {
+  text-align: right;
+  color: $primary-color;
+  font-weight: $global-weight-bold;
+}
+.form {
+  margin-top: 2rem;
+}
+// .flip {
+//   -ms-transform: rotate(180deg); /* IE 9 */
+//   -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+//   transform: rotate(180deg);
+// }
+.orbit_control {
+  font-size: 3em;
+  color: $primary-color;
+}
+.page_banner {
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 2rem;
+}
+#details_banner {
+  @extend .page_banner;
+  background-image: url('../img/details-header.jpg');
+}
+#pricing_banner {
+  @extend .page_banner;
+  background-image: url('../img/pricing-header.jpg');
+}
+#gallery_banner {
+  @extend .page_banner;
+  background-image: url('https://placehold.it/1680x300?text=Banner');
+}
+#faq_banner {
+  @extend .page_banner;
+  background-image: url('../img/faq-header.jpg');
+}
+#contact_banner {
+  @extend .page_banner;
+  background-image: url('../img/contact-header.jpg');
+}
+.primary-hr {
+  color: $primary-color;
+  border: 2px solid $primary-color;
+}
+.amenities {
+  background-color: $primary-color;
+  color: $white;
+  border-radius: $global-radius;
+  padding: $global-padding;
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+  h6 {
+    color: $white;
+  }
+}
+.gray_wide {
+  width: 100%;
+  background-color: $light-gray;
+  padding: 1rem 0;
+}
+.padTop {
+  padding-top: 1rem;
+}
+.reasons {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.number {
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  //width: 100%;
+  //height: 100%;
+  padding: 1rem;
+  font-size: 3rem;
+  color: $white;
+  background-image: url(../img/circle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+ol {
+  font-size: 1.5em;
+  p {
+    font-size: 1rem;
+  }
+}
+.contactMethod {
+  font-weight: bold;
+}
+.contactForm {
+  text-align: right;
+}
+#map {
+  width: 100%;
+  height: 400px;
+}
